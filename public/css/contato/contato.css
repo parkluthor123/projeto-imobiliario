@@ -1,0 +1,308 @@
+.contato-area
+{
+    margin: 50px 0;
+}
+
+.contato-area,
+.contato-area .contato-wrapper
+{
+    width: var(--full);
+}
+
+.contato-area .contato-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.contato-area .contato-wrapper .contato-items
+{
+    max-width: 642px;
+    width: var(--full);
+    min-height: 580px;
+}
+
+.contato-area .contato-wrapper .contato-items .image-area
+{
+    max-width: 465px;
+    margin: 0 auto;
+    max-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contato-area .contato-wrapper .contato-items .image-area span
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: var(--full);
+    height: var(--full);
+    background-image: url('/img/contato/window-image-cover.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    animation: scaleContatoImage 16s ease-in-out alternate infinite;
+}
+
+@keyframes scaleContatoImage {
+    0%
+    {
+        -webkit-transform: scale(1);
+    }
+    50%
+    {
+        -webkit-transform: scale(1.3);
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+.contato-area .contato-wrapper .contato-items .image-area figure
+{
+    z-index: 2;
+    position: relative;
+    width: fit-content;
+}
+
+.contato-area .contato-wrapper .contato-items .image-area figure img
+{
+    max-width: var(--full);
+    max-height: 400px;
+}
+
+.contato-area .contato-wrapper .contato-items .description-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.contato-area .contato-wrapper .contato-items .description-area h2
+{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contato-area .contato-wrapper .contato-items .description-area p
+{
+    text-align: center;
+    margin-top: 22px;
+}
+
+.contato-area .contato-wrapper .contato-items
+{
+    padding: 0 20px;
+}
+
+.contato-area .contato-wrapper .contato-items form
+{
+    width: var(--full);
+    padding: 40px 26px;
+    box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 20%);
+    border: 1px solid rgba(81, 81, 81, 0.7);
+    border-radius: 10px 0 10px 0;
+    position: relative;
+}
+
+.contato-area .contato-wrapper .contato-items form .title-area p
+{
+    text-align: center;
+}
+
+.contato-area .contato-wrapper .contato-items form .form-items
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contato-area .contato-wrapper .contato-items form .form-items:not(:first-child)
+{
+    margin-top: 15px;
+}
+
+.contato-area .contato-wrapper .contato-items form .form-items label
+{
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.contato-area .contato-wrapper .contato-items form .form-items input,
+.contato-area .contato-wrapper .contato-items form .form-items textarea
+{
+    min-height: 35px;
+    width: var(--full);
+    border-style: none;
+    background-color: var(--body-color);
+    border: 2px solid var(--font-color);
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+.contato-area .contato-wrapper .contato-items form .form-items textarea
+{
+    padding-top: 8px;
+    min-height: 100px;
+}
+
+.contato-area .contato-wrapper .contato-items form .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contato-area .contato-wrapper .contato-items form .btn-area button
+{
+    border-style: none;
+    max-width: 320px;
+    width: var(--full);
+    min-height: 40px;
+    background-color: var(--font-color);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px 0 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contato-area .contato-wrapper .contato-items form .btn-area button:hover
+{
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.box-contact-area,
+.box-contact-area .box-contact-wrapper
+{
+    width: var(--full);
+}
+
+.box-contact-area .box-contact-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-contact-area .box-contact-wrapper .box-contact-items
+{
+    max-width: 314px;
+    min-height: 314px;
+    margin: 0 7px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #707070;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0px 0px 2px 1px #515151;
+    background-color: var(--marrom-100);
+}
+
+.box-contact-area .box-contact-wrapper .box-contact-items i
+{
+    font-size: 80px;
+    color: var(--font-color);
+}
+
+.box-contact-area .box-contact-wrapper .box-contact-items h2
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 40px;
+}
+
+.map-area
+{
+    margin: 50px 0;
+    padding: 0 15px;
+}
+
+.map-area,
+.map-area .map-wrapper
+{
+    width: var(--full);
+}
+
+.map-area .map-wrapper iframe
+{
+    border-radius: 10px;
+    border: 2px solid var(--marrom-25);
+}
+
+.map-area .title-area
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.map-area .title-area .title h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 35px;
+}
+
+.map-area .title-area .title h1:before
+{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 187px;
+    background-color: var(--font-color);
+    bottom: 0px;
+    left: calc((100% / 2) - 197px / 2);
+}
+
+@media(max-width: 992px)
+{
+    .box-contact-area .box-contact-wrapper
+    {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .box-contact-area .box-contact-wrapper .box-contact-items
+    {
+        margin-top: 30px;
+    }
+
+    .contato-area .contato-wrapper
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato-area .contato-wrapper .contato-items
+    {
+        padding: 0;
+    }
+    .contato-area .contato-wrapper .contato-items
+    {
+        min-height: 100px;
+        padding: 40px 0;
+    }
+}

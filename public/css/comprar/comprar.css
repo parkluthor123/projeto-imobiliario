@@ -1,0 +1,748 @@
+.title-page-area
+{
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.comprar-area
+{
+    width: var(--full);
+    background: rgba(237, 235, 215, 0.3);
+}
+
+.comprar-area .comprar-wrapper
+{
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    align-items: center;
+    min-height: 344px;
+    flex-direction: column;
+}
+
+.comprar-area .comprar-wrapper .title-area,
+.comprar-area .comprar-wrapper .title-area .title
+{
+    width: var(--full);
+}
+
+.comprar-area .comprar-wrapper .title-area .title h1
+{
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+}
+
+.comprar-area .comprar-wrapper .ball-wrapper
+{
+    max-width: 186px;
+    padding: 5px;
+    background-color: var(--yellow);
+    border-radius: 100%;
+    min-height: 186px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    margin-top: 25px;
+}
+
+.comprar-area .comprar-wrapper .ball-wrapper span
+{
+    color: var(--marrom-25);
+    font-weight: bold;
+}
+
+.comprar-area .comprar-wrapper .ball-wrapper .btn-area,
+.comprar-area .comprar-wrapper .ball-wrapper .btn-area a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+}
+
+.comprar-area .comprar-wrapper .ball-wrapper .btn-area
+{
+    margin-top: 10px;
+}
+
+.comprar-area .comprar-wrapper .ball-wrapper .btn-area a
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 139px;
+    width: var(--full);
+    min-height: 33px;
+    background-color: #fff;
+    border-radius: 10px 0 10px 0;
+    color: var(--marrom-25);
+}
+
+.comprar-search-area
+{
+    background-image: url('/img/comprar/imobiliaria-comprar-image-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 420px;
+    margin-bottom: 100px;
+}
+
+.comprar-search-area .comprar-search-wrapper
+{
+    width: var(--full);
+    position: absolute;
+    bottom: -100px;
+}
+
+.comprar-search-area .comprar-search-wrapper .line-1,
+.comprar-search-area .comprar-search-wrapper .line-2
+{
+    display: flex;
+    position: absolute;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search
+{
+    width: var(--full);
+    min-height: 200px;
+    background-color: var(--body-color);
+    border: 1px solid #707070;
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 55px;
+    box-shadow: 0px 1px 4px 0px #707070;
+    position: relative;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .line-1
+{
+    position: absolute;
+    right: -5px;
+    top: -18px;
+    height: 90px;
+    width: 5px;
+    background-color: var(--yellow);
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search::before
+{
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: -18px;
+    height: 90px;
+    width: 5px;
+    background-color: var(--yellow);
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .line-2
+{
+    position: absolute;
+    right: -18px;
+    top: -5px;
+    height: 5px;
+    width: 90px;
+    background-color: var(--yellow);
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search::after
+{
+    content: "";
+    position: absolute;
+    left: -18px;
+    bottom: -5px;
+    height: 5px;
+    width: 90px;
+    background-color: var(--yellow);
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area
+{
+    max-width: 310px;
+    min-height: 90px;
+    width: var(--full);
+    padding: 10px;
+    border-radius: 10px 0 10px 0;
+    background-color: var(--yellow);
+    margin: 0 5px;
+    position: relative;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area::before
+{
+    content: "Alugar";
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    color: var(--marrom-25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area::after
+{
+    content: "Comprar";
+    text-transform: uppercase;
+    position: absolute;
+    color: var(--marrom-25);
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area .btn-swicth
+{
+    min-height: 70px;
+    background-color: var(--body-color);
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(100% / 2);
+    border-radius: 10px 0 10px 0;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    width: var(--full);
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+
+.btn-swicth-rent
+{
+    transform: translateX(0%) !important;
+    transition: all 0.4s ease-in-out;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .comprar-field-search
+{
+    max-width: 520px;
+    width: var(--full);
+    margin: 0 5px;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .comprar-field-search input
+{
+    border-style: none;
+    min-height: 90px;
+    max-width: 520px;
+    width: var(--full);
+    background-color: var(--body-color);
+    padding: 15px;
+    border: 1px solid #707070;
+
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .comprar-filter-area
+{
+    max-width: 150px;
+    width: var(--full);
+    background-color: var(--marrom-100);
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    border-top: 1px solid var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    margin: 0 5px;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .comprar-filter-area p
+{
+    font-weight: bold;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .comprar-filter-area i
+{
+    font-size: 30px;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .btn-search
+{
+    margin: 0 5px;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .btn-search,
+.comprar-search-area .comprar-search-wrapper .comprar-search .btn-search button
+{
+    max-width: 150px;
+    min-height: 70px;
+    width: var(--full);
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .btn-search button
+{
+    background-color: var(--yellow);
+    border-style: none;
+    box-shadow: 0px 1px 4px 0px #707070;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comprar-search-area .comprar-search-wrapper .comprar-search .btn-search button i
+{
+    margin-right: 5px;
+    color: #fff;
+}
+
+.comprar-content-area
+{
+    padding-bottom: 98px;
+}
+
+.comprar-content-area
+.comprar-content-area .comprar-content-wrapper,
+.comprar-content-area .comprar-content-title
+{
+    width: var(--full);
+}
+
+.comprar-content-area .comprar-content-title
+{
+    padding-top: 65px;
+}
+
+.comprar-content-area .comprar-content-title h1
+{
+    font-size: 35px;
+    position: relative;
+    padding-left: 98px;
+    display: flex;
+    min-height: 98px;
+    align-items: center;
+}
+
+.comprar-content-area .comprar-content-title h1::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 100px;
+    background-color: var(--yellow);
+}
+
+.comprar-content-area .comprar-content-title h1::after
+{
+    content: "";
+    position: absolute;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--marrom-100);
+    opacity: 0.8;
+}
+
+.comprar-content-area .comprar-content-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.comprar-content-area .comprar-content-wrapper a
+{
+    margin: 15px 5px;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items
+{
+    max-width: 325px;
+    min-height: 280px;
+    width: var(--full);
+    border: 1px solid #707070;
+    border-radius: 0 10px 0 10px;
+    position: relative;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .line-1
+{
+    position: absolute;
+    left: -6.5px;
+    top: -3px;
+    width: 70px;
+    height: 3px;
+    background-color: var(--yellow);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .line-2
+{
+    position: absolute;
+    left: -3px;
+    top: -7px;
+    height: 70px;
+    width: 3px;
+    background-color: var(--yellow);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items::before
+{
+    position: absolute;
+    content: "";
+    right: -6.5px;
+    bottom: -3px;
+    width: 70px;
+    height: 3px;
+    background-color: var(--yellow);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items::after
+{
+    position: absolute;
+    content: "";
+    right: -3px;
+    bottom: -7px;
+    height: 70px;
+    width: 3px;
+    background-color: var(--yellow);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .comprar-description
+{
+    width: var(--full);
+    margin-top: 24px;
+    padding: 0 15px;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .comprar-description h2
+{
+    font-size: 18px;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .image-area
+{
+    max-width: 324px;
+    max-height: 140px;
+    display : flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .image-area figure
+{
+    width: fit-content;
+    border-radius: 0 10px 0 10px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .image-area figure img
+{
+    max-width: var(--full);
+    max-height: 140px;
+    border-radius: 0 14px 0 0;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items span
+{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.comprar-content-area .comprar-content-wrapper a:hover .comprar-content-items
+{
+    background-color: var(--marrom-100);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .btn-area
+{
+    width: var(--full);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .btn-area a
+{
+    max-width: 150px;
+    width: var(--full);
+    background-color: var(--yellow);
+    min-height: 35px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--body-color);
+    border-radius: 0 10px 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .btn-area a::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    transition: all 0.4s ease-in-out;
+    height: var(--full);
+    background-color: rgba(255,255,255,0.2);
+}
+
+.comprar-content-area .comprar-content-wrapper .comprar-content-items .btn-area a:hover::before
+{
+    width: var(--full);
+    transition: all 0.4s ease-in-out;
+}
+
+.filter-area
+{
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    width: var(--full);
+    min-height: 0px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--yellow);
+}
+
+.filter-area .filter
+{
+    width: var(--full);
+    position: absolute;
+    left: 0;
+}
+
+.filter-area .filter-wrapper
+{
+    width: var(--full);
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.filter-area .filter-wrapper .filter-items
+{
+    display: flex;
+    flex-direction: column;
+    width: var(--full);
+    padding: 0 15px;
+
+}
+
+.filter-area .filter-wrapper .filter-items .wrapp
+{
+    display: flex;
+}
+
+.filter-area .filter-wrapper .filter-items .wrapp .form-preco
+{
+    padding: 0 10px;
+}
+
+.filter-area .filter-wrapper .filter-items .wrapp .form-preco label
+{
+    font-weight: bold;
+    padding-left: 10px;
+    color: var(--marrom-25);
+}
+
+.filter-area .filter-wrapper .filter-items .wrapp .form-preco input
+{
+    border-style: none;
+    width: var(--full);
+    min-height: 35px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.filter-area .filter-wrapper .filter-items .form-qtd,
+.filter-area .filter-wrapper .filter-items .form-tipo
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.filter-area .filter-wrapper .filter-items .form-qtd label,
+.filter-area .filter-wrapper .filter-items .form-tipo label
+{
+    font-weight: bold;
+    color: var(--marrom-25);
+}
+
+.filter-area .filter-wrapper .filter-items .form-qtd input,
+.filter-area .filter-wrapper .filter-items .form-tipo select
+{
+    border-style: none;
+    min-height: 35px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.filter-active
+{
+    min-height: 150px;
+    height: auto !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.closeFilter
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.closeFilter::before
+{
+    content: "\ea0f";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--full);
+    color: var(--marrom-25);
+    height: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1100px)
+{
+    .comprar-search-area .comprar-search-wrapper .comprar-search
+    {
+        flex-wrap: wrap;
+    }
+
+    .comprar-search-area .comprar-search-wrapper .comprar-search .comprar-field-search
+    {
+        margin: 15px 5px;
+    }
+
+    .comprar-search-area .comprar-search-wrapper .comprar-search .comprar-field-search,
+    .comprar-search-area .comprar-search-wrapper .comprar-search .comprar-field-search input
+    {
+        max-width: none;
+    }
+
+}
+
+@media(max-width: 1034px)
+{
+    .comprar-content-area .comprar-content-wrapper
+    {
+        justify-content: space-evenly;
+    }
+}
+
+@media(max-width: 992px)
+{
+    .filter-area .filter-wrapper
+    {
+        flex-direction: column;
+    }
+
+    .filter-active
+    {
+        min-height: 250px;
+    }
+    .filter-area .filter-wrapper
+    {
+        margin-top: 20px;
+    }
+    .closeFilter
+    {
+        top: -7px;
+        right: 10px;
+    }
+
+}
+
+@media(max-width: 680px)
+{
+    .comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area
+    {
+        max-width: none;
+    }
+}
+
+@media(max-width: 468px)
+{
+    .comprar-search-area .comprar-search-wrapper .comprar-search
+    {
+        padding: 20px 10px;
+    }
+
+    .comprar-search-area .comprar-search-wrapper .comprar-search .switch-sell-area .btn-swicth
+    {
+        font-size: 16px;
+    }
+    .filter-area .filter-wrapper .filter-items .wrapp
+    {
+        flex-direction: column;
+    }
+    .filter-active
+    {
+        min-height: 330px;
+    }
+
+    .filter-area .filter-wrapper .filter-items .wrapp [class^=form-]
+    {
+        padding: 0;
+    }
+
+}
+
+@media(max-width: 372px)
+{
+    .comprar-search-area .comprar-search-wrapper .comprar-search .comprar-filter-area,
+    .comprar-search-area .comprar-search-wrapper .comprar-search .btn-search
+    {
+        margin: 15px 5px;
+    }
+
+    .comprar-search-area .comprar-search-wrapper .comprar-search .comprar-filter-area,
+    .comprar-search-area .comprar-search-wrapper .comprar-search .btn-search,
+    .comprar-search-area .comprar-search-wrapper .comprar-search .btn-search button
+    {
+        max-width: none;
+    }
+}

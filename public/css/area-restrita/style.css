@@ -1,0 +1,1135 @@
+.entrar-title
+{
+    margin: 50px 0;
+}
+
+.entrar-area .container-full
+{
+    overflow: hidden;
+}
+
+.entrar-area,
+.entrar-area .entrar-wrapper
+{
+    width: var(--full);
+}
+
+.entrar-area .entrar-wrapper
+{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child
+{
+    flex-direction: column;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .title-area h1
+{
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .subtitle-area
+{
+    margin-top: 20px;
+}
+.entrar-area .entrar-wrapper .entrar-items:first-child .content
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .content ul
+{
+    list-style: none;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .content ul li
+{
+    font-weight: bold;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .content ul li:before
+{
+    content: "\f00c";
+    font-family: "icomoon";
+    font-size: 16px;
+    padding-right: 10px;
+    color: var(--yellow);
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .content p
+{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .btn-area a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    width: var(--full);
+    min-height: 40px;
+    background-color: var(--yellow);
+    color: var(--marrom-25);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px 0 10px 0;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .btn-area a i
+{
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--marrom-25);
+}
+
+.entrar-area .entrar-wrapper .entrar-items:first-child .subtitle-area p
+{
+    font-size: 24px;
+    text-align: center;
+}
+
+.entrar-area .entrar-wrapper .entrar-items:last-child
+{
+    background-color: var(--marrom-100);
+    position: relative;
+    box-shadow: -1px -3px 7px 0px var(--font-color);
+}
+
+.entrar-area .entrar-wrapper .entrar-items:last-child:before
+{
+    content: "";
+    position: absolute;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: var(--full);
+    background-color: var(--marrom-100);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 480px;
+    min-height: 100px;
+    background-color: #fff;
+    width: var(--full);
+    border-radius: 20px;
+    padding: 50px 15px;
+    box-shadow: 0px 0px 3px -1px var(--font-color);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .title-area,
+.entrar-area .entrar-wrapper .entrar-items form .title-area .title,
+.entrar-area .entrar-wrapper .entrar-items form .title-area .subtitle
+{
+    width: var(--full);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .title-area .title h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--marrom-25);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .title-area .subtitle p
+{
+    text-align: center;
+    color: var(--marrom-25);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .title-area .subtitle
+{
+    margin-top: 15px;
+    margin-bottom: 44px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .form-item
+{
+    display: flex;
+    width: var(--full);
+    justify-content: center;
+    flex-direction: column;
+}
+.entrar-area .entrar-wrapper .entrar-items form .form-item:not(:first-child)
+{
+    margin-top: 20px;
+}
+
+
+.entrar-area .entrar-wrapper .entrar-items form .form-item label
+{
+    margin-bottom: 10px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: var(--marrom-25);
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .form-item input
+{
+    border-style: none;
+    min-height: 50px;
+    width: var(--full);
+    border: 2px solid var(--marrom-25);
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .btn-area button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+    border-style: none;
+    background-color: var(--yellow);
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px 0 10px 0;
+    min-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .btn-area button:hover
+{
+    transition: all 0.3s ease-in-out;
+    background-color: var(--marrom-50);
+    border-radius: 20px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .criar-conta
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17px;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .criar-conta p
+{
+    text-align: center;
+    color: #515151;
+    font-weight: bold;
+}
+
+.entrar-area .entrar-wrapper .entrar-items form .criar-conta p a
+{
+    color: var(--yellow);
+}
+
+.criar-conta-area,
+.criar-conta-area .criar-conta-wrapper
+{
+    width: var(--full);
+    padding: 50px 0;
+}
+
+.criar-conta-area .criar-conta-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.criar-conta-area .criar-conta-wrapper form
+{
+    max-width: 882px;
+    min-height: 710px;
+    width: var(--full);
+    background-color: var(--body-color);
+    border: 2px solid var(--marrom-25-2nd-version);
+    border-radius: 20px;
+    padding: 40px 30px;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-title-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-title-area .title h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-title-area .subtitle
+{
+    padding-top: 15px;
+}
+.criar-conta-area .criar-conta-wrapper .form-title-area .subtitle p
+{
+    text-align: center;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-item
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-item:not(:first-child)
+{
+    margin-top: 20px;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-item label
+{
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.criar-conta-area .criar-conta-wrapper form .form-item input
+{
+    border-style: none;
+    border: 2px solid var(--marrom-25-2nd-version);
+    min-height: 50px;
+    border-radius: 10px;
+    padding-left: 15px;
+    background-color: var(--body-color);
+}
+
+.criar-conta-area .criar-conta-wrapper form .privacy-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.criar-conta-area .criar-conta-wrapper form .privacy-area p a
+{
+    font-weight: bold;
+}
+
+.criar-conta-area .criar-conta-wrapper form .privacy-area input[type=checkbox]
+{
+    margin-right: 10px;
+}
+
+.criar-conta-area .criar-conta-wrapper form .btn-area
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+}
+
+.criar-conta-area .criar-conta-wrapper form .btn-area button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 10px 0 10px 0;
+    background-color: var(--yellow);
+    padding: 2px;
+    max-width: 450px;
+    min-height: 40px;
+    font-weight: bold;
+    width: var(--full);
+    color: var(--marrom-25);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.criar-conta-area .criar-conta-wrapper form .btn-area button:hover
+{
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.criar-conta-area .container-full
+{
+    position: relative;
+    margin-top: 50px;
+}
+
+.criar-conta-area .criar-conta-wrapper form
+{
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 0px 3px 0px #707070;
+}
+
+.criar-conta-area .container-full:before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background-color: var(--marrom-100);
+    width: 86%;
+    z-index: 1;
+}
+
+.verifyModal-area
+{
+    background-color: var(--yellow);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: var(--full);
+    z-index: 10;
+}
+
+.verifyModal-area,
+.verifyModal-area .verifyModal-wrapper
+{
+    width: var(--full);
+}
+
+.verifyModal-area .verifyModal-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    position: relative;
+}
+
+.verifyModal-area .verifyModal-wrapper span
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    z-index: 2;
+    cursor: pointer
+}
+
+.verifyModal-area .verifyModal-wrapper span::before
+{
+    content: "\ea0f";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--full);
+    color: var(--marrom-25);
+    height: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verifyModal-area .verifyModal-wrapper p
+{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.verifyModal-area .verifyModal-wrapper .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.verifyModal-area .verifyModal-wrapper .btn-area a
+{
+    display: flex;
+    width: fit-content;
+    min-height: 35px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.restrict-area
+{
+    margin-bottom: 30px;
+}
+
+.restrict-area,
+.restrict-area .restrict-wrapper
+{
+    width: var(--full);
+}
+
+.restrict-area .restrict-wrapper
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 380px;
+}
+
+.restrict-area .restrict-wrapper a
+{
+    margin: 0 5px;
+}
+
+.restrict-area .restrict-wrapper a,
+.restrict-area .restrict-wrapper a .restrict-items
+{
+    max-width: 374px;
+    min-height: 300px;
+    width: var(--full);
+}
+
+.restrict-area .restrict-wrapper a .restrict-items
+{
+    border: 1px solid var(--font-color);
+    border-radius: 10px;
+    background-color: var(--marrom-100);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 3px 0px var(--font-color);
+}
+
+.restrict-area .restrict-wrapper a .restrict-items i
+{
+    font-size: 50px;
+}
+
+.restrict-area .restrict-welcome
+{
+    max-width: 600px;
+    margin: 60px auto;
+}
+
+.restrict-area .restrict-welcome h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.restrict-area .restrict-welcome p
+{
+    text-align: center;
+}
+
+
+.restrict-area .restrict-wrapper a .restrict-items .title-area .title h1,
+.restrict-area .restrict-wrapper a .restrict-items .subtitle p
+{
+    text-align: center;
+}
+
+.restrict-area .restrict-wrapper a .restrict-items .title-area,
+.restrict-area .restrict-wrapper a .restrict-items .subtitle
+{
+    margin-top: 30px;
+}
+
+.restrict-area .restrict-wrapper a .restrict-items .title-area .title h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.restrict-area .restrict-wrapper a .restrict-items:hover .title-area .title h1
+{
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.ar_info-area
+{
+    padding: 50px 0;
+}
+
+.ar_info-area .ar_info-wrapper
+{
+    display: flex;
+    justify-content: center;
+    width: var(--full);
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items
+{
+    max-width: 612px;
+    width: var(--full);
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form
+{
+    max-width: 612px;
+    width: var(--full);
+    border-radius: 20px 0 20px 0;
+    border: 1px solid rgba(81, 81, 81, 0.7);
+    box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 20%);
+    padding: 40px 15px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item
+{
+    width: var(--full);
+    display: flex;
+    flex-direction: column;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item label
+{
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item input,
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item select
+{
+    border-style: none;
+    border: 2px solid var(--font-color);
+    padding-left: 15px;
+    width: var(--full);
+    display: flex;
+    border-radius: 10px;
+    min-height: 35px;
+    background-color: var(--body-color);
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item:not(:first-child):not(.form-wrapp .form-item),
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp
+{
+    margin-top: 15px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-item label
+{
+    font-weight: bold;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp
+{
+    display: flex;
+    align-items: center;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp .form-item:first-child
+{
+    margin-right: 7.5px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp .form-item:last-child
+{
+    margin-left: 7.5px;
+    max-width: 180px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items form .btn-area button
+{
+    border-style: none;
+    max-width: 320px;
+    width: var(--full);
+    min-height: 40px;
+    background-color: var(--font-color);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px 0 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ar_info-area .ar_info-wrapper .ar_info-items form .btn-area button:hover
+{
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items .change-password-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items .change-password-area h2
+{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items .change-password-area p
+{
+    text-align: center;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items .change-password-area .btn-area
+{
+    margin-top: 20px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ar_info-area .ar_info-wrapper .ar_info-items .change-password-area .btn-area button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 180px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--yellow);
+    border-style: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px #515151;
+    width: var(--full);
+    min-height: 40px;
+    border-radius: 10px;
+    color: var(--marrom-25);
+}
+
+.description-restrict-area,
+.description-restrict-area .description-restrict-wrapper
+{
+    width: var(--full);
+}
+
+.description-restrict-area .description-restrict-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description-restrict-area .description-restrict-wrapper .title
+{
+    margin-top: 50px;
+}
+
+.description-restrict-area .description-restrict-wrapper .title h1
+{
+    font-size: clamp(16px, 35px, 35px);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.description-restrict-area .description-restrict-wrapper .ar_description
+{
+    margin: 30px 0;
+}
+
+.description-restrict-area .description-restrict-wrapper .ar_description p
+{
+    font-size: 24px;
+    text-align: center;
+}
+
+.description-restrict-area .btn-area a
+{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.description-restrict-area .btn-area a:before
+{
+    content: "\f053";
+    font-family: 'icomoon';
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.modal-change-password
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--full);
+    height: 100vh;
+    z-index: 1021;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    display: none;
+}
+
+.modal-change-password .modal-change .loading
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--full);
+    height: 100%;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    display: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;display:block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cg transform='translate(50 50) scale(0.8)'%3E%3Cg%3E%3CanimateTransform attributeName='transform' type='scale' repeatCount='indefinite' calcMode='spline' dur='1s' values='0.8;0.5;0.8' keyTimes='0;0.5;1' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3Crect x='-45' y='-45' width='90' height='90' fill='%23e3b23b' stroke='%23edebd7' stroke-width='8' stroke-linejoin='round' rx='1' ry='1'%3E%3Canimate attributeName='rx' repeatCount='indefinite' dur='1s' values='0;50;0' keyTimes='0;0.5;1'%3E%3C/animate%3E%3Canimate attributeName='ry' repeatCount='indefinite' dur='1s' values='0;50;0' keyTimes='0;0.5;1'%3E%3C/animate%3E%3Canimate attributeName='stroke-width' repeatCount='indefinite' dur='1s' values='8;12.8;8' keyTimes='0;0.5;1'%3E%3C/animate%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 0 0;270 0 0;540 0 0' keyTimes='0;0.5;1' calcMode='spline' keySplines='0.5 0 0.5 1;0.5 0 0.5 1'%3E%3C/animateTransform%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.modal-change-password .modal-change
+{
+    max-width: 400px;
+    background-color: var(--body-color);
+    border-radius: 20px;
+    padding: 30px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 3px 0px #515151;
+    position: relative;
+}
+
+.modal-change-password .modal-change form
+{
+    width: var(--full);
+}
+
+.modal-change-password .modal-change form .form-items
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: var(--full);
+    margin-top: 20px;
+}
+
+.modal-change-password .modal-change form .form-items span
+{
+    display: flex;
+    font-size: 14px;
+    color: #b22;
+}
+
+.modal-change-password .modal-change form .form-items label
+{
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-change-password .modal-change form .form-items input
+{
+    border-style: none;
+    width: var(--full);
+    min-height: 35px;
+    border: 1px solid var(--font-color);
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.modal-change-password .modal-change form .btn-area
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.modal-change-password .modal-change form .btn-area button:first-child
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--marrom-50);
+    border-style: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px #515151;
+    width: var(--full);
+    min-height: 40px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.modal-change-password .modal-change form .btn-area button:last-child
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: var(--yellow);
+    border-style: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px #515151;
+    width: var(--full);
+    min-height: 40px;
+    border-radius: 10px;
+    color: var(--marrom-25);
+}
+
+.successMessagePassword
+{
+    display: none;
+    justify-content: center;
+    z-index: 1021;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: var(--full);
+    padding: 5px;
+    opacity: 0;
+    animation: translateSuccess 0.3s ease-in-out alternate forwards;
+}
+
+.successMessagePassword .messagePassword
+{
+    max-width: 300px;
+    min-height: 70px;
+    width: var(--full);
+    background-color: var(--yellow);
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successMessagePassword .messagePassword p
+{
+    font-weight: bold;
+    color: var(--body-color);
+}
+
+.table-area,
+.table-area .table-wrapper
+{
+    width: var(--full);
+}
+
+.table-area .table-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+}
+
+.table-area .table-wrapper table
+{
+    width: var(--full);
+    border-spacing: 0;
+    margin: 50px 0;
+    border-radius: 10px 0 10px 0;
+    overflow: hidden;
+}
+
+.table-area .table-wrapper table thead
+{
+    background-color: var(--font-color);
+    border-spacing: 0;
+}
+
+.table-area .table-wrapper table thead th
+{
+    color: var(--body-color);
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.table-area .table-wrapper table tbody
+{
+    width: var(--full);
+    border-spacing: 0;
+}
+
+.table-area .table-wrapper table tbody tr
+{
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid var(--marrom-50);
+}
+
+.table-area .table-wrapper table tbody tr:nth-child(2n + 1)
+{
+    background-color: rgba(163, 149, 148, 0.1);
+}
+
+
+.table-area .table-wrapper table tbody tr td
+{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--marrom-50);
+}
+
+.table-area .table-wrapper table tbody tr td .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-area .table-wrapper table tbody tr td .btn-area a
+{
+    max-width: 50px;
+    min-height: 35px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.table-area .table-wrapper table tbody tr td .btn-area a i
+{
+    font-size: 24px;
+}
+
+@keyframes translateSuccess {
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@media(max-width: 992px)
+{
+    .entrar-area .entrar-wrapper
+    {
+        flex-direction: column-reverse;
+    }
+
+    .ar_info-area .ar_info-wrapper
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items .change-password-area
+    {
+        margin: 50px 0;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items:first-child
+    {
+        padding-top: 0;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp
+    {
+        flex-direction: column;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp .form-item:last-child
+    {
+        max-width: none;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items
+    {
+        margin: 25px 0;
+    }
+
+    .ar_info-area .ar_info-wrapper .ar_info-items form .form-wrapp .form-item:first-child
+    {
+        margin-right: 0;
+    }
+
+}
+
+@media(max-width: 864px)
+{
+    .restrict-area .restrict-wrapper
+    {
+        flex-wrap: wrap;
+    }
+
+    .restrict-area .restrict-wrapper a
+    {
+        margin: 20px 0;
+    }
+}
+
+@media(max-width: 680px)
+{
+    .criar-conta-area .criar-conta-wrapper form
+    {
+        padding: 40px 15px;
+    }
+}
+
+@media(max-width: 330px)
+{
+    .modal-change-password .modal-change form .btn-area button
+    {
+        max-width: none !important;
+        margin-top: 10px;
+    }
+}

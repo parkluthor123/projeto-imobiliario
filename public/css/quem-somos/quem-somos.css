@@ -1,0 +1,225 @@
+.quem-somos-area
+{
+    padding: 50px 0;
+}
+
+.missao
+{
+    position: relative;
+}
+
+.missao::before
+{
+    content: "";
+    position: absolute;
+    height: 550px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--marrom-100);
+    width: 39.739583%;
+}
+.valores
+{
+    position: relative;
+}
+
+.valores::before
+{
+    content: "";
+    position: absolute;
+    height: 550px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--marrom-100);
+    width: 39.739583%;
+}
+
+.quem-somos-area,
+.quem-somos-area .quem-somos-wrapper
+{
+    width: var(--full);
+}
+
+.quem-somos-area .quem-somos-wrapper
+{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items
+{
+    max-width: 642px;
+    width: var(--full);
+    min-height: 550px;
+    z-index: 2;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items:first-child
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quem-somos-valores .quem-somos-wrapper .quem-somos-items:first-child
+{
+    display : flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.quem-somos-valores .quem-somos-wrapper .quem-somos-items:last-child
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .image-area
+{
+    max-width: 496px;
+    max-height: 474px;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .image-area figure
+{
+    width: fit-content;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .image-area figure img
+{
+    max-width: var(--full);
+    max-height: 474px;
+    border-radius: 0 10px 0 10px;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .quem-somos-text
+{
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .quem-somos-text .title-area .title h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .quem-somos-text .title-area .title h1::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--font-color);
+    width: 90px;
+}
+
+.quem-somos-area .quem-somos-wrapper .quem-somos-items .quem-somos-text .content
+{
+    margin-top: 40px;
+}
+
+.quem-somos-area .quem-somos-middle
+{
+    min-height: 450px;
+    width: var(--full);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+}
+
+.quem-somos-area .quem-somos-middle .title-area
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+}
+
+.quem-somos-area .quem-somos-middle .title-area .title
+{
+    width: fit-content;
+}
+
+.quem-somos-area .quem-somos-middle .title-area .title h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.quem-somos-area .quem-somos-middle .title-area .title h1::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: var(--full);
+    height: 3px;
+    background-color: var(--font-color);
+}
+
+.quem-somos-area .quem-somos-middle .content
+{
+    margin-top: 40px;
+    width: var(--full);
+}
+
+.quem-somos-area .quem-somos-middle .content p
+{
+    text-align: center;
+}
+
+.corretor-btn,
+.corretor-btn .btn-area
+{
+    width: var(--full);
+}
+
+.corretor-btn .btn-area
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 210px;
+}
+
+.corretor-btn .btn-area a
+{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 282px;
+    width: var(--full);
+    min-height: 40px;
+    background-color: var(--yellow);
+    color: var(--body-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0 10px 0 10px;
+}
+
+@media(max-width: 992px)
+{
+    .quem-somos-area .quem-somos-wrapper
+    {
+        flex-direction: column;
+    }
+    
+    .quem-somos-valores .quem-somos-wrapper
+    {
+        flex-direction: column-reverse;
+    }
+    
+}

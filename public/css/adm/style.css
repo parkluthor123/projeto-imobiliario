@@ -1,0 +1,147 @@
+@import "../global.css";
+
+.navbar-adm-area
+{
+    box-shadow: 0px 0px 16px -7px #515151;
+}
+
+.navbar-adm-area,
+.navbar-adm-area .navbar-adm-wrapper
+{
+    width: var(--full);
+}
+
+.navbar-adm-area .navbar-adm-wrapper
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 70px;
+}
+
+.navbar-adm-area .navbar-adm-wrapper h1
+{
+    text-transform: uppercase;
+}
+
+.login-area,
+.login-area .login-wrapper
+{
+    width: var(--full);
+}
+
+.login-area .login-wrapper
+{
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-area .login-wrapper form
+{
+    max-width: 350px;
+    padding: 25px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--marrom-100);
+    border-radius: 20px 0 20px 0;
+    box-shadow: 0px 0px 3px 0px var(--font-color);
+    width: var(--full);
+}
+
+.login-area .login-wrapper form .form-items
+{
+    display: flex;
+    justify-content: center;
+    width: var(--full);
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login-area .login-wrapper form .form-items label
+{
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.login-area .login-wrapper form .form-items input
+{
+    border-style: none;
+    border-radius: 10px;
+    min-height: 35px;
+    border: 2px solid var(--marrom-25);
+    padding-left: 15px;
+}
+
+.login-area .login-wrapper form .btn-area
+{
+    width: var(--full);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-area .login-wrapper form .btn-area button
+{
+    border-style: none;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 35px;
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px var(--font-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.messageErrorLogin
+{
+    width: var(--full);
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeLeft .4s ease-in-out alternate forwards;
+}
+
+.messageErrorLogin .messageError
+{
+    max-width:  350px;
+    width: var(--full);
+    min-height: 70px;
+    background-color: var(--yellow);
+    padding: 5px;
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageErrorLogin .messageError p
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes fadeLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

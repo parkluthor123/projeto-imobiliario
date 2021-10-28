@@ -1,0 +1,436 @@
+.vender-area,
+.vender-area .vender-wrapper
+{
+    width: var(--full);
+}
+
+.vender-area
+{
+    padding-top: 50px;
+}
+
+.vender-area .vender-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+}
+
+.vender-area .vender-wrapper .vender-items
+{
+    max-width: 642px;
+    width: var(--full);
+    padding: 0 20px;
+}
+
+.vender-area .vender-wrapper .vender-items:first-child
+{
+    padding-top: 40px;
+}
+
+.vender-area .vender-wrapper .vender-items .title-area .title h1
+{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.vender-area .vender-wrapper .vender-items .content
+{
+    margin-top: 35px;
+}
+
+.vender-area .vender-wrapper .vender-items .image-area
+{
+    max-width: 487px;
+    max-height: 183px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.vender-area .vender-wrapper .vender-items .image-area figure
+{
+    width: fit-content;
+}
+
+.vender-area .vender-wrapper .vender-items .image-area figure img
+{
+    max-width: var(--full);
+    max-height: 183px;
+}
+
+.vender-area .vender-wrapper .vender-items form
+{
+    max-width: 612px;
+    width: var(--full);
+    border-radius: 20px 0 20px 0;
+    border: 1px solid rgba(81, 81, 81, 0.7);
+    box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 20%);
+    padding: 40px 15px;
+}
+
+.vender-area .vender-wrapper .vender-items form .title-area,
+.vender-area .vender-wrapper .vender-items form .title-area .title
+{
+    width: var(--full);
+}
+
+.vender-area .vender-wrapper .vender-items form .title-area
+{
+    margin-bottom: 43px;
+}
+
+.vender-area .vender-wrapper .vender-items form .title-area .title p
+{
+    text-align: center;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-item
+{
+    width: var(--full);
+    display: flex;
+    flex-direction: column;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-item label
+{
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-item input,
+.vender-area .vender-wrapper .vender-items form .form-item select
+{
+    border-style: none;
+    border: 2px solid var(--font-color);
+    padding-left: 15px;
+    width: var(--full);
+    display: flex;
+    border-radius: 10px;
+    min-height: 35px;
+    background-color: var(--body-color);
+}
+
+.vender-area .vender-wrapper .vender-items form .form-item:not(:first-child):not(.form-wrapp .form-item),
+.vender-area .vender-wrapper .vender-items form .form-wrapp
+{
+    margin-top: 15px;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-item label
+{
+    font-weight: bold;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-wrapp
+{
+    display: flex;
+    align-items: center;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-wrapp .form-item:first-child
+{
+    margin-right: 7.5px;
+}
+
+.vender-area .vender-wrapper .vender-items form .form-wrapp .form-item:last-child
+{
+    margin-left: 7.5px;
+    max-width: 180px;
+}
+
+.vender-area .vender-wrapper .vender-items form .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.vender-area .vender-wrapper .vender-items form .btn-area button
+{
+    border-style: none;
+    max-width: 320px;
+    width: var(--full);
+    min-height: 40px;
+    background-color: var(--font-color);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px 0 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.vender-area .vender-wrapper .vender-items form .btn-area button:hover
+{
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.vantagens-area .title-area
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.vantagens-area .title-area .title h1
+{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.vantagens-area,
+.vantagens-area .vantagens-wrapper
+{
+    width: var(--full);
+}
+
+.vantagens-area .vantagens-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items
+{
+    min-height: 480px;
+    max-width: 638px;
+    width: var(--full);
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens
+{
+    max-width: 383px;
+    width: var(--full);
+    min-height: 383px;
+    border: 1px solid var(--font-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px #515151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens .content
+{
+    width: var(--full);
+    margin-top: 40px;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens .content h1
+{
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens .content p
+{
+    text-align: center;
+    margin-top: 26px;
+}
+
+.vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens i
+{
+    font-size: 137px;
+}
+
+.consultores-area
+{
+    margin: 40px 0;
+}
+.consultores-area .title-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.consultores-area .title-area .title h1
+{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.consultores-area,
+.consultores-area .consultores-wrapper
+{
+    width: var(--full);
+}
+
+.consultores-area .consultores-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.consultores-area .consultores-wrapper .consultores-items
+{
+    max-width: 638px;
+    width: var(--full);
+}
+
+.consultores-area .consultores-wrapper .consultores-items .content
+{
+    max-width: 537px;
+    margin: 0 auto;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .content .btn-area
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .content .btn-area a
+{
+    max-width: 350px;
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    color: var(--marrom-25);
+    text-transform: uppercase;
+    min-height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .content .btn-area p
+{
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .content .btn-area a i
+{
+    padding-right: 10px;
+    font-weight: bold;
+    color: var(--marrom-25);
+}
+
+.consultores-area .consultores-wrapper .consultores-items .image-area
+{
+    max-width: 388px;
+    max-height: 397px;
+    margin: 0 auto;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .image-area figure
+{
+    width: fit-content;
+}
+
+.consultores-area .consultores-wrapper .consultores-items .image-area figure img
+{
+    max-width: var(--full);
+    max-height: 397px;
+}
+
+@media(max-width: 992px)
+{
+    .vender-area .vender-wrapper
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .vender-area .vender-wrapper .vender-items .title-area .title h1
+    {
+        text-align: center;
+    }
+
+    .vender-area .vender-wrapper .vender-items
+    {
+        margin: 25px 0;
+    }
+
+    .vantagens-area .vantagens-wrapper
+    {
+        flex-direction: column;
+    }
+
+    .vender-area .vender-wrapper .vender-items:first-child
+    {
+        padding-top: 0;
+    }
+
+    .vender-area .vender-wrapper .vender-items form .form-wrapp
+    {
+        flex-direction: column;
+    }
+    .vender-area .vender-wrapper .vender-items form .form-wrapp .form-item:last-child
+    {
+        max-width: none;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .vender-area .vender-wrapper .vender-items form .form-wrapp .form-item:first-child
+    {
+        margin-right: 0;
+    }
+
+    .consultores-area .consultores-wrapper .consultores-items:last-child
+    {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 768px)
+{
+    .consultores-area .consultores-wrapper
+    {
+        flex-direction: column;
+    }
+
+    .vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens .content h1
+    {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 380px)
+{
+    .vantagens-area .vantagens-wrapper .vantagens-items .box-vantatgens i
+    {
+        font-size: 120px;
+    }
+}
+
+@media(max-width: 312px)
+{
+    .consultores-area .consultores-wrapper .consultores-items .content .btn-area a
+    {
+        text-align: center;
+        padding: 2px;
+    }
+
+    .consultores-area .consultores-wrapper .consultores-items .content .btn-area a i
+    {
+        position: absolute;
+        font-size: 35px;
+        opacity: 0.2;
+        color: #fff;
+    }
+}
