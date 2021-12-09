@@ -25,6 +25,7 @@ class CreateClientesTable extends Migration
             $table->string('phone')->nullable();
             $table->string('bairro')->nullable();
             $table->string('cidade')->nullable();
+            $table->string('num')->nullable();
             $table->string('uf')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

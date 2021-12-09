@@ -34,10 +34,10 @@
                         <div class="form-item">
                             <label for="tipo_imovel" value="{{ $user['renda'] }}">Renda</label>
                             <select name="renda" id="renda">
-                                <option value="1">De R$ 1500 a R$ 2500</option>
-                                <option value="2">De R$ 3000 a R$ 4500</option>
-                                <option value="3">De R$ 5000 a R$ 10.000</option>
-                                <option value="4">Acima de 10.000</option>
+                                <option value="1" {{ $user['renda'] == 1 ? "selected" : "" }}>De R$ 1500 a R$ 2500</option>
+                                <option value="2" {{ $user['renda'] == 2 ? "selected" : "" }}>De R$ 3000 a R$ 4500</option>
+                                <option value="3" {{ $user['renda'] == 3 ? "selected" : "" }}>De R$ 5000 a R$ 10.000</option>
+                                <option value="4" {{ $user['renda'] == 4 ? "selected" : "" }}>Acima de 10.000</option>
                             </select>
                         </div>
                         <div class="form-wrapp">

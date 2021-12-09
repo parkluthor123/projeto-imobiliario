@@ -58,20 +58,6 @@
                         </div>
                     </div>
                 </a>
-
-                <a href="{{ route('area-restrita.agendamentos') }}" title="Ver meus agendamentos">
-                    <div class="restrict-items">
-                        <i class="icon-eye"></i>
-                        <div class="title-area">
-                            <div class="title">
-                                <h1>Ver meus<br>agendamentos</h1>
-                            </div>
-                        </div>
-                        <div class="subtitle">
-                            <p>Edite suas informações pessoais, como nome, CEP, endereço entre outros.</p>
-                        </div>
-                    </div>
-                </a>
             </div>
         </div>
     </div>

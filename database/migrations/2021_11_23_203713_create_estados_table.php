@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImagemImovelsTable extends Migration
+class CreateEstadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateImagemImovelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('imagem_imovels', function (Blueprint $table) {
+        Schema::create('estados', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->unsignedBigInteger('id_imoveis')->nullable();
-            $table->foreign('id_imoveis')->references('id')->on('imovels')->nullable();
+            $table->string('estados')->nullable();
+            $table->string('url_estado')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateImagemImovelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imagem_imovels');
+        Schema::dropIfExists('estados');
     }
 }

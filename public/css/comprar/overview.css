@@ -1,0 +1,369 @@
+
+.overview-imoveis-area,
+.overview-imoveis-area .overview-imoveis-wrapper,
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper
+{
+    width: var(--full);
+}
+
+.seeMoreImages
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--full);
+    background-image: linear-gradient(to top, #262626, transparent);
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.seeMoreImages a
+{
+    pointer-events: all;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.seeMoreImages a:hover
+{
+    transition: all .3s ease-in-out;
+    color: var(--marrom-25);
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper
+{
+    display: grid;
+    position: relative;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .layout-5
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 5px;
+    grid-template-areas:
+    "img1 img2 img3"
+    "img1 img4 img5"
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .layout-4
+{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 5px;
+    grid-template-areas:
+    "img1 img2"
+    "img3 img4"
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .layout-3
+{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 5px;
+    grid-template-areas:
+    "img1 img2"
+    "img1 img3"
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .layout-2
+{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    gap: 5px;
+    grid-template-areas:
+    "img1 img2"
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .layout-1
+{
+    grid-template-columns: 2fr;
+    grid-template-rows: 400px;
+    gap: 5px;
+    grid-template-areas:
+    "img1"
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a
+{
+    display: flex;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a figure
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a:first-child figure,
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a:not(:first-child) figure
+{
+    overflow: hidden;
+    width: var(--full);
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a figure img
+{
+    width: var(--full);
+    height: var(--full);
+    object-fit: cover;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a figure img
+{
+    transition: all 0.3s ease-in-out;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-images-wrapper a figure img:hover
+{
+    -webkit-transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao
+{
+    max-width: 800px;
+    width: var(--full);
+    min-height: 100px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar
+{
+    max-width: 400px;
+    width: var(--full);
+    min-height: 100px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .title-area,
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .title-area .title
+{
+    width: var(--full);
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .title-area .title h1
+{
+    font-size: 18px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .imovel-status
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    min-height: 40px;
+    width: var(--full);
+    background-color: var(--yellow);
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 25px;
+    text-transform: uppercase;
+    color: var(--marrom-25);
+    position: relative;
+    box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .imovel-valor
+{
+    font-size: 24px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area
+{
+    display: flex;
+    margin-top: 40px;
+    position: relative;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area:before
+{
+    content: "";
+    position: absolute;
+    right: -3px;
+    height: 40px;
+    width: 3px;
+    top: -12px;
+    background-color: var(--yellow);
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area:after
+{
+    content: "";
+    position: absolute;
+    right: -11px;
+    height: 3px;
+    width: 40px;
+    top: -3px;
+    background-color: var(--yellow);
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area .subtotal-items
+{
+    width: var(--full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    flex-direction: column;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area .subtotal-items span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area .subtotal-items span p
+{
+    text-align: center;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .subtotal-area .subtotal-items span i
+{
+    margin-right: 10px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .sobre-area h1
+{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .imoveis-descricao .sobre-area
+{
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar form
+{
+    width: var(--full);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: var(--marrom-100);
+    box-shadow: 0px 0px 3px 0px #000;
+    position: sticky;
+    top: 165px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar form .form-item
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar form .form-item label
+{
+    font-weight: bold;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar form .form-item input,
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar form .form-item select
+{
+    border-style: none;
+    border: 2px solid var(--font-color);
+    border-radius: 10px;
+    min-height: 35px;
+    padding-left: 15px;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar .btn-area
+{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar .btn-area button
+{
+    border-style: none;
+    background-color: var(--yellow);
+    color: var(--marrom-25-2nd-version);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 0px 3px 0px #ccc;
+    cursor: pointer;
+}
+
+.overview-imoveis-area .overview-imoveis-wrapper .overview-imoveis-content .form-agendar .btn-area button:disabled
+{
+    opacity: 0.7;
+    cursor: auto;
+}
+
+@media(max-width: 992px)
+{
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5 .grid-layout-image-3,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5 .grid-layout-image-5
+    {
+        display: none;
+    }
+}
+
+@media(max-width: 764px)
+{
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-4,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-3,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-2
+    {
+        display: flex;
+        justify-content: center;
+        width: var(--full);
+    }
+
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5 .grid-layout-image-2,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-5 .grid-layout-image-4,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-4 .grid-layout-image-2,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-4 .grid-layout-image-3,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-4 .grid-layout-image-4,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-3 .grid-layout-image-2,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-3 .grid-layout-image-3,
+    .overview-imoveis-area .overview-imoveis-wrapper .layout-2 .grid-layout-image-2
+    {
+        display: none;
+    }
+}

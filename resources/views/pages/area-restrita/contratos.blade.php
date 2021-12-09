@@ -18,16 +18,17 @@
                     <th></th>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Emitido em <br>24/10/2021</td>
-                        <td>Meu contrato</td>
-                        <td>
-                            <div class="btn-area">
-                                <a href="#" target="_blank" title="Visualizar"><i class="icon-eye"></i></a>
-                                <a href="#" target="_blank" title="Baixar"><i class="icon-download"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach($contratos as $contrato)
+                        <tr>
+                            <td>Emitido em <br>{{ $contrato->dateFinal }}</td>
+                            <td>{{ $contrato->descricao_contrato }}</td>
+                            <td>
+                                <div class="btn-area">
+                                    <a href="{{ $contrato->contrato }}" target="_blank" title="Baixar"><i class="icon-download"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

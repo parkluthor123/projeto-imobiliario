@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{ URL::to('css/global.css') }}">
 </head>
 <body>
+@php
+    $ajustesLinks = \App\Models\Ajuste::first();
+@endphp
     <div class="sticky-top">
         <nav class="navbar-area">
             <div class="navbar-top">
@@ -31,15 +34,15 @@
                         <div class="navbar-top-wrapper">
                             <div class="list-social-media">
                                 <ul>
-                                    <li><a href="#" title="Instagram"><i class="icon-instagram"></i></a></li>
-                                    <li><a href="#" title="Facebook"><i class="icon-facebook-square"></i></a></li>
-                                    <li><a href="#" title="E-mail"><i class="icon-envelope-o"></i></a></li>
+                                    <li><a {{ $ajustesLinks['instagram'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['instagram'] !== null ? $ajustesLinks['instagram'] : 'javascript:;'}}" title="Instagram"><i class="icon-instagram"></i></a></li>
+                                    <li><a {{ $ajustesLinks['facebook'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['facebook'] !== null ? $ajustesLinks['facebook'] : 'javascript:;'}}" title="Facebook"><i class="icon-facebook-square"></i></a></li>
+                                    <li><a href="{{ $ajustesLinks['email'] !== null ? $ajustesLinks['email'] : 'javascript:;'}}" title="E-mail"><i class="icon-envelope-o"></i></a></li>
                                 </ul>
                             </div>
 
                             <div class="list-number">
                                 <ul>
-                                    <li><a href="#" title="WhatsApp"><i class="icon-whatsapp"></i>(11) 91111-1111</a></li>
+                                    <li><a {{ $ajustesLinks['topbar_num'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['topbar_num'] !== null ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustesLinks['topbar_num'] ) : 'javascript:;' }}" title="WhatsApp"><i class="icon-whatsapp"></i>{{ $ajustesLinks['topbar_num'] !== null ? $ajustesLinks['topbar_num'] : 'Sem WhatsApp' }}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -97,9 +100,9 @@
                         <div class="footer-content">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <ul>
-                                <li><a href="#" title="Instagram"><i class="icon-instagram"></i></a></li>
-                                <li><a href="#" title="Facebook"><i class="icon-facebook-square"></i></a></li>
-                                <li><a href="#" title="LinkedIn"><i class="icon-linkedin-square"></i></a></li>
+                                <li><a {{ $ajustesLinks['instagram'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['instagram'] !== null ? $ajustesLinks['instagram'] : 'javascript:;'}}" title="Instagram"><i class="icon-instagram"></i></a></li>
+                                <li><a {{ $ajustesLinks['facebook'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['facebook'] !== null ? $ajustesLinks['facebook'] : 'javascript:;'}}" title="Facebook"><i class="icon-facebook-square"></i></a></li>
+                                <li><a {{ $ajustesLinks['linkedin'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustesLinks['linkedin'] !== null ? $ajustesLinks['linkedin'] : 'javascript:;'}}" title="LinkedIn"><i class="icon-linkedin-square"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -121,9 +124,21 @@
                         </div>
                         <div class="footer-content">
                             <ul>
-                                <li><a href="#" title="E-mail">contato@gmail.com</a></li>
-                                <li><a href="#" title="Endereço">Rua Zilda da silva, 1298 - <br>São Paulo</a></li>
-                                <li><a href="#" title="Telefone">(11) 3232-9874</a></li>
+                                @if($ajustesLinks['email'] !== null)
+                                    <li><a href="mailto:{{$ajustesLinks['email']}}" title="E-mail"><i class="icon-envelope-o"></i> {{ $ajustesLinks['email'] }}</a></li>
+                                @endif
+                                @if($ajustesLinks['enderecos'] !== null)
+                                    <li><a href="{{ $ajustesLinks['link_endereco'] }}" title="Endereço"><i class="icon-map-pin"></i> {{ $ajustesLinks['enderecos'] }}</a></li>
+                                @endif
+                                @if($ajustesLinks['footer_num1'] !== null)
+                                    <li><a href="{{ strlen($ajustesLinks['footer_num1']) >= 15 ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustesLinks['footer_num1']) : 'tel:'.str_replace(["(", ")", "-", " "], "", $ajustesLinks['footer_num1']) }}" title="Número de contato">{!! strlen($ajustesLinks['footer_num1']) >= 15 ? '<i class="icon-whatsapp"></i> '.$ajustesLinks['footer_num1'] : '<i class="icon-phone"></i> '.$ajustesLinks['footer_num1'] !!}</a></li>
+                                @endif
+                                @if($ajustesLinks['footer_num2'] !== null)
+                                    <li><a href="{{ strlen($ajustesLinks['footer_num2']) >= 15 ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustesLinks['footer_num2']) : 'tel:'.str_replace(["(", ")", "-", " "], "", $ajustesLinks['footer_num2']) }}" title="Número de contato">{!! strlen($ajustesLinks['footer_num2']) >= 15 ? '<i class="icon-whatsapp"></i> '.$ajustesLinks['footer_num2'] : '<i class="icon-phone"></i> '.$ajustesLinks['footer_num2'] !!}</a></li>
+                                @endif
+                                @if($ajustesLinks['endereco'] !== null)
+                                        <li><a href="{{ $ajustesLinks['link_endereco'] }}" title="Número de contato">{!! '<i class="icon-map-marker"></i>'.$ajustesLinks['endereco'] !!}</a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>

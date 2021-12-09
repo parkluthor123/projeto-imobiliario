@@ -64,12 +64,10 @@
            }
         }
 
-        window.onload = ()=>{
-            handleMessageAnimation("waiting", 1)
-            const btnClose = document.querySelector("#messageClose");
-            btnClose.addEventListener("click", ()=>{
-                handleMessageAnimation("now", 1);
-            })
-        }
+        handleMessageAnimation("waiting", 1)
+        const btnClose = document.querySelector("#messageClose");
+        btnClose.addEventListener("click", ()=>{
+            handleMessageAnimation("now", 1);
+        })
     </script>
 @endif

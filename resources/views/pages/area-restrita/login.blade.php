@@ -52,7 +52,7 @@
                         <p>Se precisar de alguma ajuda, entre em contato com nossos<br> corretores, tiraremos todas as suas dúvidas.</p>
                     </div>
                     <div class="btn-area">
-                        <a href="#"><i class="icon-whatsapp"></i> Nosso whatsapp</a>
+                        <a {{ $ajustes['topbar_num'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustes['topbar_num'] !== null ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustes['topbar_num']) : 'javascript:;' }}" title="Conversar com corretor"><i class="icon-whatsapp"></i> Nosso whatsapp</a>
                     </div>
                 </div>
                 <div class="entrar-items">

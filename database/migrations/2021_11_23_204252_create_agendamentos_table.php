@@ -15,12 +15,11 @@ class CreateAgendamentosTable extends Migration
     {
         Schema::create('agendamentos', function (Blueprint $table) {
             $table->id();
-            $table->date('data_agendamento')->nullable();
-            $table->time('horario_agendamento')->nullable();
-            $table->unsignedBigInteger('id_cliente')->nullable();
-            $table->unsignedBigInteger('id_imoveis')->nullable();
-            $table->foreign('id_cliente')->references('id')->on('clientes')->nullable();
-            $table->foreign('id_imoveis')->references('id')->on('imovels')->nullable();
+            $table->string('nome')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('tipo_contato')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }

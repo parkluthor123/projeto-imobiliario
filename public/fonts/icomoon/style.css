@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?78e4kp');
-  src:  url('fonts/icomoon.eot?78e4kp#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?78e4kp') format('truetype'),
-    url('fonts/icomoon.woff?78e4kp') format('woff'),
-    url('fonts/icomoon.svg?78e4kp#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?v66g3b');
+  src:  url('fonts/icomoon.eot?v66g3b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v66g3b') format('truetype'),
+    url('fonts/icomoon.woff?v66g3b') format('woff'),
+    url('fonts/icomoon.svg?v66g3b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,20 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-hand-holding-heart:before {
-  content: "\e900";
+.icon-road:before {
+  content: "\f018";
 }
-.icon-sun:before {
-  content: "\e9d4" !important;
+.icon-bed:before {
+  content: "\f236";
 }
-.icon-user-tie:before {
-  content: "\e976";
-}
-.icon-equalizer:before {
-  content: "\e992";
-}
-.icon-cross:before {
-  content: "\ea0f";
+.icon-hotel:before {
+  content: "\f236";
 }
 .icon-eye:before {
   content: "\f06e";
@@ -138,4 +132,65 @@
 }
 .icon-file-pdf-o:before {
   content: "\f1c1";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-gear:before {
+  content: "\f013";
+}
+.icon-tags:before {
+  content: "\f02c";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
+.icon-image:before {
+  content: "\f03e";
+}
+.icon-photo:before {
+  content: "\f03e";
+}
+.icon-picture-o:before {
+  content: "\f03e";
+}
+.icon-bell:before {
+  content: "\f0f3";
+}
+.icon-user-circle:before {
+  content: "\f2bd";
+}
+.icon-pencil:before {
+  content: "\f040";
+}
+.icon-trash:before {
+  content: "\f1f8";
+}
+.icon-question-circle:before {
+  content: "\f059";
+}
+.icon-store-alt:before {
+  content: "\e901";
+  color: #515151;
+}
+.icon-hand-holding-heart:before {
+  content: "\e900";
+}
+.icon-sun:before {
+  content: "\e9d4" !important;
+}
+.icon-user-tie:before {
+  content: "\e976";
+}
+.icon-equalizer:before {
+  content: "\e992";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-plus:before {
+  content: "\ea0a";
 }

@@ -7,6 +7,8 @@
 @section('description', 'Teste')
 <link rel="stylesheet" href="{{ URL::to('css/vender/vender.css') }}">
 @include('components.bannerTop')
+@include('components.message')
+@include('components.messageCallback')
 <section class="vender-area">
     @include('components.title-section')
     <div class="container-full">
@@ -28,7 +30,7 @@
                     </div>
                 </div>
                 <div class="vender-items">
-                    <form action="#" method="POST">
+                    <form action="{{ route('vender.send') }}" method="POST">
                         @csrf
                         <div class="title-area">
                             <div class="title">
@@ -143,7 +145,7 @@
                         <p>Você pode optar por conversar diretamente com nossos corretores. Tenha um atendimento rápido e prático, tire suas dúvidas à respeito de locação ou até mesmo venda de imóveis, estamos sempre à sua disposição. Nosso objetivo é sempre ajudar você a realizar seu sonho.</p>
                         <div class="btn-area">
                             <p>Entre em contato pelo Whatsapp</p>
-                            <a href="#" title="Conversar com corretor"><i class="icon-whatsapp"></i> Conversar com corretor</a>
+                            <a {{ $ajustes['topbar_num'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustes['topbar_num'] !== null ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustes['topbar_num']) : 'javascript:;' }}" title="Conversar com corretor"><i class="icon-whatsapp"></i> Conversar com corretor</a>
                         </div>
                     </div>
                 </div>

@@ -11,30 +11,43 @@
             </div>
         </div>
     </div>
-@endif
-<script>
+    <script>
 
-    function handleMessageAnimation(type, ms)
-    {
-        const message = document.querySelector("#message-success");
+        function handleMessageAnimation(type, ms)
+        {
+            const message = document.querySelector("#message-success");
 
-        let fadeOut =
-            `
+            let fadeOut =
+                `
                 animation: fadeOut ${ms}s ease-in-out forwards alternate;
            `;
 
 
-        function setStyle()
-        {
-            return new Promise((resolve)=>{
-                resolve(message.style.cssText = fadeOut)
-            })
-        }
+            function setStyle()
+            {
+                return new Promise((resolve)=>{
+                    resolve(message.style.cssText = fadeOut)
+                })
+            }
 
-        if(type === "waiting")
-        {
+            if(type === "waiting")
+            {
 
-            setTimeout(()=>{
+                setTimeout(()=>{
+                    setStyle()
+                        .then((boolean)=>{
+                            if(boolean)
+                            {
+                                setTimeout(()=>{
+                                    message.style.cssText = "display: none";
+                                }, (ms.toFixed(1) + 50))
+                            }
+                        })
+                }, 4000);
+
+            }
+            else if(type === "now")
+            {
                 setStyle()
                     .then((boolean)=>{
                         if(boolean)
@@ -44,28 +57,13 @@
                             }, (ms.toFixed(1) + 50))
                         }
                     })
-            }, 4000);
-
+            }
         }
-        else if(type === "now")
-        {
-            setStyle()
-                .then((boolean)=>{
-                    if(boolean)
-                    {
-                        setTimeout(()=>{
-                            message.style.cssText = "display: none";
-                        }, (ms.toFixed(1) + 50))
-                    }
-                })
-        }
-    }
 
-    window.onload = ()=>{
         handleMessageAnimation("waiting", 1)
         const btnClose = document.querySelector("#messageClose");
         btnClose.addEventListener("click", ()=>{
             handleMessageAnimation("now", 1);
         })
-    }
-</script>
+    </script>
+@endif

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\AreaCliente;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ajuste;
 use App\Models\Cliente;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -16,7 +17,10 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view("pages.area-restrita.login");
+        $ajustes = Ajuste::get()->first();
+        return view("pages.area-restrita.login", array(
+            'ajustes' => $ajustes,
+        ));
     }
 
     public function login(Request $request)
@@ -33,7 +37,6 @@ class LoginController extends Controller
         else{
             return redirect()->route('area-restrita.login');
         }
-
     }
 
     public function criar()

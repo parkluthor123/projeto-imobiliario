@@ -17,10 +17,6 @@
         <a href="{{ route('area-restrita.home') }}" title="Entrar">Meu perfil</a>
         <span><a href="{{ route('area-restrita.sair') }}" title="Entrar"><i class="icon-power-off"></i></a></span>
     </li>
-{{--        <ul>--}}
-{{--            <li><a href="{{ route('area-restrita.home') }}" title="Entrar">Meu perfil</a></li>--}}
-{{--            <li><a href="{{ route('area-restrita.sair') }}" title="Entrar">Sair</a></li>--}}
-{{--        </ul>--}}
     @else
         <li><a href="{{ url('/entrar') }}" title="Entrar">Entrar</a></li>
     @endif

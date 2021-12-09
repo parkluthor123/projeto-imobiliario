@@ -4,6 +4,8 @@ namespace App\Http\Controllers\AreaCliente;
 
 use App\Http\Controllers\Controller;
 use http\Env\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
@@ -116,19 +118,31 @@ class HomeController extends Controller
         }
     }
 
+//  Response que está trazendo os dados do banco relacionado aos boletos
     public function faturas()
     {
-        return view('pages.area-restrita.faturas');
+        $id = Auth::guard('clientes')->id();
+        $mensalidade = DB::table("boletos")
+            ->select(DB::raw("*, DATE_FORMAT(data_boleto,'%d/%m/%Y') AS dateFinal"))
+            ->where("id_cliente", $id)->get();
+
+        return view('pages.area-restrita.faturas', array(
+            'mensalidade' => $mensalidade,
+        ));
     }
+
 
     public function contratos()
     {
-        return view('pages.area-restrita.contratos');
-    }
+        $id = Auth::guard('clientes')->id();
 
-    public function agendamentos()
-    {
-        return view('pages.area-restrita.agendamentos');
+        $contratos = DB::table("contratos")
+            ->select(DB::raw("*, DATE_FORMAT(data_contrato,'%d/%m/%Y') AS dateFinal"))
+            ->where("id_cliente", $id)->get();
+
+        return view('pages.area-restrita.contratos', array(
+            'contratos' => $contratos
+        ));
     }
 
 }

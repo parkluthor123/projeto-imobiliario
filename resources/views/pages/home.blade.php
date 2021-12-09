@@ -11,25 +11,31 @@
         <div class="container-full">
             <div class="container-static">
                 <div class="slider-search-wrapper">
-                    <form action="#" method="POST">
+                    <form>
                         @csrf
                         <div class="subtitle-area">
                             <p>Escolha o estado e o bairro e localize o imóvel ideal para <strong>você</strong>!</p>
                         </div>
                         <div class="form-cidade">
                             <label for="cidade">Cidade</label>
-                            <select name="cidade" id="cidade">
-                                <option value="">Selecione a cidade</option>
+                            <select name="cidade" id="estados" onchange="estadoAjax(this.value, '{{ route('home.estados.ajax') }}')">
+                                <option value="" hidden disabled selected>Selecione a cidade</option>
+                                @foreach($estados as $uf)
+                                    <option value="{{ $uf['url_estado'] }}">{{ $uf['estados'] }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-bairro">
                             <label for="bairro">Bairro</label>
-                            <select name="bairro" id="bairro">
-                                <option value="">Selecione a bairro</option>
+                            <select name="bairro" id="bairros" disabled>
+                                <option value="" hidden disabled selected>Selecione a bairro</option>
+                                @foreach($bairros as $bairro)
+                                    <option value="{{ $bairro['url_bairro'] }}">{{ $bairro['bairros'] }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="btn-area">
-                            <button title="Buscar" type="submit" name="buscar">Buscar</button>
+                            <button title="Buscar" type="submit" id="searchImoveis" name="buscar">Buscar</button>
                         </div>
                     </form>
                 </div>
@@ -41,21 +47,21 @@
         <div class="splide" id="slider-home">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide">
-                        <figure>
-                            <img src="{{ URL::to('img/home/slider-home-image.webp') }}" alt="Image slider">
-                        </figure>
-                    </li>
-                    <li class="splide__slide">
-                        <figure>
-                            <img src="{{ URL::to('img/home/slider-home-image.webp') }}" alt="Image slider">
-                        </figure>
-                    </li>
-                    <li class="splide__slide">
-                        <figure>
-                            <img src="{{ URL::to('img/home/slider-home-image.webp') }}" alt="Image slider">
-                        </figure>
-                    </li>
+                    @if(count($banner) > 0)
+                        @foreach($banner as $banners)
+                            <li class="splide__slide">
+                                <figure>
+                                    <img src="{{ URL::to($banners['image']) }}" alt="{{ $banners['description'] }}">
+                                </figure>
+                            </li>
+                        @endforeach
+                    @else
+                        <li class="splide__slide">
+                            <figure>
+                                <img src="{{ URL::to('img/home/slider-home-image.webp') }}" alt="Image slider">
+                            </figure>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="splide__arrows arrows-wrapper">
@@ -82,15 +88,23 @@
                         <div class="splide" id="slider-caption">
                             <div class="splide__track">
                                 <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <p>O melhor investimento<br><strong>para você</strong>!</p>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <p>O melhor investimento<br><strong>para você</strong>!(2)</p>
-                                    </li>
-                                    <li class="splide__slide">
-                                        <p>O melhor investimento<br><strong>para você</strong>!(3)</p>
-                                    </li>
+                                    @if(count($banner) > 0)
+                                        @foreach($banner as $banners)
+                                            <li class="splide__slide">
+                                                <p>{{ $banners['description'] }}</p>
+                                            </li>
+                                        @endforeach
+                                    @else
+                                        <li class="splide__slide">
+                                            <p>O melhor investimento<br><strong>para você</strong>!</p>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <p>O melhor investimento<br><strong>para você</strong>!(2)</p>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <p>O melhor investimento<br><strong>para você</strong>!(3)</p>
+                                        </li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
@@ -105,78 +119,39 @@
         <div class="container-static">
             @include('components.title-section')
             <div class="destaque-wrapper">
-
-                <a href="#" title="Ver mais">
-                    <div class="destaque-items">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-home-destaques.webp') }}" alt="Em destaques"/>
-                            </figure>
-                        </div>
-                        <div class="destaques-description">
-                            <div class="price">
-                                <h2>R$ 1.200.000.00</h2>
+                @if(count($imoveis) > 0)
+                    @foreach($imoveis as $imovel)
+                        <a href="{{ url('/comprar/')."/".$imovel['url_imovel'] }}" title="Ver mais">
+                            <div class="destaque-items">
+                                <span class="line-1"></span>
+                                <span class="line-2"></span>
+                                <div class="image-area">
+                                    <figure>
+                                        @if(count($imovel->getImages()->get()) > 0)
+                                            <img src="{{ URL::to($imovel->getImages()->first()->image) }}" alt="Em destaques"/>
+                                        @else
+                                            <img src="{{ URL::to('img/home/imobiliaria-home-destaques.webp') }}" alt="Em destaques"/>
+                                        @endif
+                                    </figure>
+                                </div>
+                                <div class="destaques-description">
+                                    <div class="price">
+                                        <h2>{{ "R$ ".str_replace(',', '.', $imovel['valor']) }}</h2>
+                                    </div>
+                                    <div class="rooms-metters">
+                                        <p>{{ $imovel['qtd_quartos'] }} Quartos • {{ $imovel['metros_quadrados'] }}m2</p>
+                                    </div>
+                                    <div class="localization">
+                                        <p>{{ $imovel->getBairro()->first()->bairros }} • {{ $imovel->getEstado()->first()->estados }}</p>
+                                    </div>
+                                </div>
+                                <span>Ver +</span>
                             </div>
-                            <div class="rooms-metters">
-                                <p>2 Quartos • 89m2</p>
-                            </div>
-                            <div class="localization">
-                                <p>Av. Vila Gomes, 192 • São Paulo</p>
-                            </div>
-                        </div>
-                        <span>Ver +</span>
-                    </div>
-                </a>
-
-                <a href="#" title="Ver mais">
-                    <div class="destaque-items">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-home-destaques.webp') }}" alt="Em destaques"/>
-                            </figure>
-                        </div>
-                        <div class="destaques-description">
-                            <div class="price">
-                                <h2>R$ 1.200.000.00</h2>
-                            </div>
-                            <div class="rooms-metters">
-                                <p>2 Quartos • 89m2</p>
-                            </div>
-                            <div class="localization">
-                                <p>Av. Vila Gomes, 192 • São Paulo</p>
-                            </div>
-                        </div>
-                        <span>Ver +</span>
-                    </div>
-                </a>
-
-                <a href="#" title="Ver mais">
-                    <div class="destaque-items">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-home-destaques.webp') }}" alt="Em destaques"/>
-                            </figure>
-                        </div>
-                        <div class="destaques-description">
-                            <div class="price">
-                                <h2>R$ 1.200.000.00</h2>
-                            </div>
-                            <div class="rooms-metters">
-                                <p>2 Quartos • 89m2</p>
-                            </div>
-                            <div class="localization">
-                                <p>Av. Vila Gomes, 192 • São Paulo</p>
-                            </div>
-                        </div>
-                        <span>Ver +</span>
-                    </div>
-                </a>
+                        </a>
+                    @endforeach
+                @else
+                    <h1 style="margin: 20px 0; font-size: 25px; text-align: center; text-transform: uppercase; display: flex; justify-content: center; width: 100%; align-items: center;">Sem imóveis em destaque</h1>
+                @endif
             </div>
             <div class="btn-area">
                 <a href="{{ url('/comprar') }}" title="Ver todos">Ver todos</a>
@@ -237,75 +212,61 @@
         </div>
     </div>
 </section>
-<section class="regioes-area">
-    <div class="container-full">
-        <div class="container-static">
-            <div class="title-area">
-                <div class="title">
-                    <h1>Principais regiões de São Paulo</h1>
-                </div>
-            </div>
-            <div class="regioes-wrapper">
-
-                <a href="#" title="Principais regiões">
-                    <div class="regioes-items">
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-regioes-home-image.webp') }}" alt="Principais regiões">
-                            </figure>
-                        </div>
-                        <div class="regiao-content">
-                            <div class="title-area">
-                                <h2>Centro</h2>
-                            </div>
-                            <div class="description">
-                                <p>Região central de São Paulo</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" title="Principais regiões">
-                    <div class="regioes-items">
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-regioes-home-image.webp') }}" alt="Principais regiões">
-                            </figure>
-                        </div>
-                        <div class="regiao-content">
-                            <div class="title-area">
-                                <h2>Centro</h2>
-                            </div>
-                            <div class="description">
-                                <p>Região central de São Paulo</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" title="Principais regiões">
-                    <div class="regioes-items">
-                        <div class="image-area">
-                            <figure>
-                                <img src="{{ URL::to('img/home/imobiliaria-regioes-home-image.webp') }}" alt="Principais regiões">
-                            </figure>
-                        </div>
-                        <div class="regiao-content">
-                            <div class="title-area">
-                                <h2>Centro</h2>
-                            </div>
-                            <div class="description">
-                                <p>Região central de São Paulo</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </div>
-</section>
 <script>
     const destaques = new setTitleSection(".destaque-area", "Em destaque")
+    const token = document.querySelector("meta[name='csrf-token']").getAttribute("content");
+
+    function sendvalue(route)
+    {
+        let data = {
+            estado: document.querySelector("#estados"),
+            bairros: document.querySelector("#bairros"),
+            urlEstado: '',
+        }
+
+        data.estado.addEventListener("change", ()=>{
+            data.urlEstado = data.estado.value;
+        })
+
+        this.buttonSubmit = document.querySelector("#searchImoveis");
+        buttonSubmit.addEventListener("click", function(e){
+            e.preventDefault();
+            if(data.urlEstado !== '')
+            {
+                window.location.href = `{{ url('/comprar/') }}/${data.urlEstado}/${data.bairros.value}`
+            }
+            else
+            {
+                window.location.href = `{{ route('goComprar') }}`
+            }
+        })
+    }
+    sendvalue()
+
+    async function estadoAjax(el, route)
+    {
+        this.estado = document.querySelector("#estados");
+        this.bairros = document.querySelector("#bairros");
+        await fetch(route, {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': token,
+            },
+            body: JSON.stringify({estado: el})
+        })
+            .then((response)=>response.json())
+            .then((responseJson)=>{
+                if(bairros.value !== 0)
+                {
+                    bairros.disabled = false;
+                    bairros.innerHTML = ``;
+                    Object.values(responseJson).map((data)=>(
+                        bairros.options.add(new Option(data.bairros, data.url_bairro))
+                    ))
+                }
+            })
+    }
 </script>
 @endsection

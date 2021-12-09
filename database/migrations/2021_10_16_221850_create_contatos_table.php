@@ -20,6 +20,7 @@ class CreateContatosTable extends Migration
             $table->string('phone')->nullable();
             $table->string('assunto')->nullable();
             $table->longText('mensagem')->nullable();
+            $table->boolean('status')->nullable();
             $table->unsignedBigInteger('id_cliente')->nullable();
             $table->foreign('id_cliente')->references('id')->on('clientes')->nullable();
             $table->timestamps();

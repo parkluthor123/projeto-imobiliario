@@ -18,16 +18,17 @@
                         <th></th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>24/10/2021</td>
-                            <td>2° via da fatura</td>
-                            <td>
-                                <div class="btn-area">
-                                    <a href="#" target="_blank" title="Visualizar"><i class="icon-eye"></i></a>
-                                    <a href="#" target="_blank" title="Baixar"><i class="icon-download"></i></a>
-                                </div>
-                            </td>
-                        </tr>
+                        @foreach($mensalidade as $fatura)
+                            <tr>
+                                <td>{{ $fatura->dateFinal }}</td>
+                                <td>{{ $fatura->descricao_boleto }}</td>
+                                <td>
+                                    <div class="btn-area">
+                                        <a href="{{ $fatura->mensalidade }}" target="_blank" title="Baixar"><i class="icon-download"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

@@ -100,6 +100,13 @@ a
     text-decoration: none;
 }
 
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
 .container-static
 {
     margin: 0 auto;
@@ -496,28 +503,13 @@ a
 .footer-area .footer-wrapper .footer-items:nth-child(3) .footer-content ul li a
 {
     display: flex;
+    align-items: center;
     font-weight: bold;
 }
 
-.footer-area .footer-wrapper .footer-items:nth-child(3) .footer-content ul li:first-child a::before
+.footer-area .footer-wrapper .footer-items:nth-child(3) .footer-content ul li a i
 {
-    content: "\f003";
-    font-family: "icomoon";
-    margin-right: 10px;
-}
-
-.footer-area .footer-wrapper .footer-items:nth-child(3) .footer-content ul li:nth-child(2) a::before
-{
-    content: "\f276";
-    font-family: "icomoon";
-    margin-right: 10px;
-}
-
-.footer-area .footer-wrapper .footer-items:nth-child(3) .footer-content ul li:nth-child(3) a::before
-{
-    content: "\f095";
-    font-family: "icomoon";
-    margin-right: 10px;
+    width: 25px;
 }
 
 .footer-area .copyright-area
@@ -889,6 +881,13 @@ a
     max-width: var(--full);
     max-height: 140px;
     border-radius: 0 14px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.destaque-area .destaque-wrapper a .destaque-items .image-area figure:hover img
+{
+    -webkit-transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .destaque-area .destaque-wrapper a .destaque-items
@@ -1067,7 +1066,7 @@ a
 .bannerMiddle-area
 {
     width: var(--full);
-    margin-top: 40px;
+    margin: 50px 0;
 }
 
 .bannerMiddle-area .bannerMiddle-content
@@ -1123,121 +1122,6 @@ a
     border-radius: 0 10px 0 10px;
     background-color: var(--body-color);
     font-weight: bold;
-}
-
-.regioes-area
-{
-    width: var(--full);
-    padding-top: 50px;
-    padding-bottom: 40px;
-}
-
-.regioes-area .title-area
-{
-    width: var(--full);
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 42px;
-}
-
-.regioes-area .title-area .title
-{
-    width: fit-content;
-}
-
-.regioes-area .title-area .title h1
-{
-    font-size: 35px;
-    position: relative;
-}
-
-.regioes-area .title-area .title h1::before
-{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    background-color: var(--font-color);
-    width: 131px;
-    left: calc((100% / 2) - (131px / 2));
-}
-
-.regioes-area .regioes-wrapper
-{
-    display : flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items
-{
-    max-width: 304px;
-    min-height: 270px;
-    width: var(--full);
-    border: 1px solid var(--font-color);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-}
-
-.regioes-area .regioes-wrapper a:hover .regioes-items
-{
-    background-color: var(--marrom-100);
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .image-area
-{
-    max-width: 304px;
-    max-height: 175px;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .image-area figure
-{
-    width: fit-content;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .image-area figure img
-{
-    max-width: var(--full);
-    max-height: 175px;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content
-{
-    margin-top: 15px;
-    padding: 0 15px;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content .title-area
-{
-    margin-bottom: 0;
-}
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content .title-area h2
-{
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content .title-area h2::after
-{
-    content: "\f041";
-    font-family: "icomoon";
-    font-size: 18px;
-    color: var(--yellow);
-    margin-left: 10px;
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content .description
-{
-    width: var(--full);
-}
-
-.regioes-area .regioes-wrapper a .regioes-items .regiao-content .description p
-{
-    text-align: center;
 }
 
 .bannerTop-area
@@ -1346,6 +1230,59 @@ a
     color: #fff;
 }
 
+.moreImages
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin:auto;display:block;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Ccircle cx='50' cy='50' r='30' stroke='%23edebd7' stroke-width='10' fill='none'%3E%3C/circle%3E%3Ccircle cx='50' cy='50' r='30' stroke='%23e3b23b' stroke-width='8' stroke-linecap='round' fill='none'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;180 50 50;720 50 50' keyTimes='0;0.5;1'%3E%3C/animateTransform%3E%3Canimate attributeName='stroke-dasharray' repeatCount='indefinite' dur='1s' values='18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882' keyTimes='0;0.5;1'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E");
+    min-height: 50px;
+    background-position: center;
+    background-size: contain;
+    width: var(--full);
+    display: flex;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+
+.pagination-area
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--full);
+    padding: 0 15px;
+    margin-top: 50px;
+}
+
+.pagination-area ul
+{
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px 0 10px 0;
+}
+
+.pagination-area ul li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    min-height: 40px;
+    background-color: var(--yellow);
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination-area ul li a i
+{
+    color: #fff;
+}
+
+.pagination-area ul li a:hover
+{
+    transition: all 0.3s ease-in-out;
+    background-color: var(--marrom-50);
+}
 
 @media(max-width: 992px)
 {
@@ -1370,16 +1307,6 @@ a
     .destaque-area .destaque-wrapper a
     {
         margin: 15px 0;
-    }
-    .regioes-area .regioes-wrapper
-    {
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .regioes-area .regioes-wrapper .regioes-items
-    {
-        margin-top: 15px;
     }
 }
 

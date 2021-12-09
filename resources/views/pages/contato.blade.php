@@ -4,7 +4,8 @@
 @section('content')
 <link rel="stylesheet" href="{{ URL::to('css/contato/contato.css') }}">
 @include('components.bannerTop')
-
+@include('components.message')
+@include('components.messageCallback')
 <section class="contato-area">
     @include('components.title-section')
     <div class="container-full">
@@ -23,7 +24,7 @@
                     </div>
                 </div>
                 <div class="contato-items">
-                    <form action="#" method="POST">
+                    <form action="{{ route('contato.sendData') }}" method="POST">
                         @csrf
                         <div class="title-area">
                             <p>Entre em contato conosco preenchendo o formulário abaixo. Teremos todo o prazer em tirar todas as dúvidas a respeito de locação, termos burocráticos, entre outros.</p>
@@ -38,7 +39,7 @@
                         </div>
                         <div class="form-items">
                             <label for="phone">Telefone</label>
-                            <input type="text" id="phone" name="phone" value="{{ old('phone') }}" placeholder="Digite o seu telefone/whatsapp">
+                            <input type="text" id="phone" name="phone" maxlength="15" value="{{ old('phone') }}" placeholder="Digite o seu telefone/whatsapp">
                         </div>
                         <div class="form-items">
                             <label for="assunto">Assunto</label>
@@ -61,22 +62,34 @@
     <div class="container-full">
         <div class="container-static">
             <div class="box-contact-wrapper">
-                <div class="box-contact-items">
-                    <i class="icon-instagram"></i>
-                    <h2>Instagram</h2>
-                </div>
-                <div class="box-contact-items">
-                    <i class="icon-facebook-square"></i>
-                    <h2>Facebook</h2>
-                </div>
-                <div class="box-contact-items">
-                    <i class="icon-linkedin-square"></i>
-                    <h2>LinkedIn</h2>
-                </div>
-                <div class="box-contact-items">
-                    <i class="icon-whatsapp"></i>
-                    <h2>WhatsApp</h2>
-                </div>
+
+                <a {{ $ajustes['instagram'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustes['instagram'] !== null ? $ajustes['instagram'] : 'javascript:;' }}">
+                    <div class="{{ $ajustes['instagram'] !== null ? 'box-contact-items' : 'box-contact-items box-disabled' }}">
+                        <i class="icon-instagram"></i>
+                        <h2>Instagram</h2>
+                    </div>
+                </a>
+
+                <a {{ $ajustes['facebook'] !== null ? 'target="_blank"' : '' }}  href="{{ $ajustes['facebook'] !== null ? $ajustes['facebook'] : 'javascript:;' }}">
+                    <div class="{{ $ajustes['facebook'] !== null ? 'box-contact-items' : 'box-contact-items box-disabled' }}">
+                        <i class="icon-facebook-square"></i>
+                        <h2>Facebook</h2>
+                    </div>
+                </a>
+
+                <a {{ $ajustes['linkedin'] !== null ? 'target="_blank"' : '' }}  href="{{ $ajustes['linkedin'] !== null ? $ajustes['linkedin'] : 'javascript:;' }}">
+                    <div class="{{ $ajustes['linkedin'] !== null ? 'box-contact-items' : 'box-contact-items box-disabled' }}">
+                        <i class="icon-linkedin-square"></i>
+                        <h2>LinkedIn</h2>
+                    </div>
+                </a>
+
+                <a {{ $ajustes['topbar_num'] !== null ? 'target="_blank"' : '' }} href="{{ $ajustes['topbar_num'] !== null ? 'https://api.whatsapp.com/send?phone='.str_replace(["(", ")", "-", " "], "", $ajustes['topbar_num'] ) : 'javascript:;' }}">
+                    <div class="{{ $ajustes['topbar_num'] !== null ? 'box-contact-items' : 'box-contact-items box-disabled' }}">
+                        <i class="icon-whatsapp"></i>
+                        <h2>WhatsApp</h2>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -90,7 +103,14 @@
     <div class="container-full">
         <div class="container-static">
             <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.4073660435483!2d-46.69439178502367!3d-23.481832284722405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef9b82d191b8d%3A0x98b2f36a71a7795a!2sR.%20Parapu%C3%A3%2C%20309%20-%20Freguesia%20do%20%C3%93%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002831-000!5e0!3m2!1spt-BR!2sbr!4v1634091077447!5m2!1spt-BR!2sbr" width="100%" height="579" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                @if($ajustes['iframe'] !== null)
+                    {!! $ajustes['iframe'] !!}
+                @else
+                    <h1 style="text-transform:uppercase;
+                        text-align: center;
+                        margin: 60px 0;
+                        font-size: 24px"><i style="font-size: 22px; padding-right: 15px" class="icon-map-marker"></i>{{ $ajustes['endereco'] }}</h1>
+                @endif
             </div>
         </div>
     </div>
@@ -98,6 +118,17 @@
 <script>
     const bannerTop = new setBannerTop("Entre em contato conosco<br> e alcance seus objetivos", "Contato");
     const title = new setTitleSection(".contato-area", "Contato");
+    const phone = document.querySelector("#phone");
+    function formatTel(v){
+        v = v.replace(/[^\d]/g, "");
+        v = v.replace(/^(\d{2})(\d)/g, "($1) $2");
+        v = v.replace(/(\d)(\d{4})$/, "$1-$2");
+        return v;
+    }
+
+    phone.addEventListener("keyup",()=>{
+        this.phone.value = formatTel(this.phone.value);
+    });
 
     const getImageHeight = document.querySelector("#img-contato").clientHeight;
     const imageWrapper = document.querySelector(".image-area");
